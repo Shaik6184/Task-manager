@@ -8,7 +8,6 @@
 **/.env.*
 
 # Vercel local
-.vercel/
 
 # Logs
 **/npm-debug.log*
