@@ -13,9 +13,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: DATABASE_URL
-        fromDatabase:
-          name: task-manager-db
-          property: connectionString
+        value: CHANGE_ME_MONGODB_ATLAS_URI
 
   - type: static_site
     name: task-manager-frontend
@@ -30,7 +28,4 @@ services:
           type: web
           envVarKey: RENDER_EXTERNAL_URL
 
-databases:
-  - name: task-manager-db
-    plan: free
 
