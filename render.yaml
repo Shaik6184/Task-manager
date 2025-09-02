@@ -17,12 +17,12 @@ services:
           name: task-manager-db
           property: connectionString
 
-  - type: static
+  - type: static_site
     name: task-manager-frontend
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
         fromService:
